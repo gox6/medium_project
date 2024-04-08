@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "Medium Project"
+version = "0.1.0"
+description = "The demo project for Medium article"
+authors = ["Jarek Grygolec <jgrygolec@gmail.com>"]
+readme = "README.md"
+packages = [{include = "medium_project", from = "src"}]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+duckdb = "^0.10.0"
+polars = "^0.20.8"
+pyarrow = "^15.0.0"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.0.0" 
+pytest-sugar = "*"  
+pytest-cov = "*"  
+black = "*"  
+mypy = "*"  
+ruff = "*"  
+isort = "*" 
+ipykernel = "^6.29.2"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
